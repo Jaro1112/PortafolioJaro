@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julian Rodriguez</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Jaro</h1>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="intro">
+      <h2>Yo soy <br> Julian Rodriguez</h2>
+      <h3><span>Software Developer</span> <span class="typing-cursor"></span></h3>
+      <p> Estudiante de Ingeniería de Software con pasión por el dibujo, la música y los videojuegos. Me encanta idear nuevos proyectos y convertir ideas en soluciones innovadoras mediante el desarrollo de software. </strong></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/julian-andres-rodriguez-ocampo-208092196" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jaro1212" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <a class="btn" href="#contact">Contáctame</a>
+      <a class="btn" href="#projects">Proyectos</a>
+    </div>
+    <div class="profile-pic">
+      <img src="imgs/IMG_2553.jpg" alt="Fotico">
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Sobre Mí</h2>
+            <p>Yo soy <br><strong>Julian Andres Rodriguez Ocampo</strong> o simplemente <strong>Jaro</strong> </p>
+            <p>Me apasiona programar y dibujar, disfruto explorando, aprendiendo y creando cosas en internet. </p>
+            <p>mis <strong>habilidades principales se centran en el backend</strong>, también disfruto del frontend, con un enfoque especial en el diseño responsive y la arquitectura web.</p>
+            <p>Una frase que me inspira es <strong><i>"Yo hago lo imposible, porque lo posible lo hace cualquiera".</i></strong> -Pablo Picasso</p>
+            <a href="#" class="btn-download-cv">Descargar CV</a>
+        </div>
+        <div class="about-img">
+            <h3 style="font-style: italic; text-align: center; color: #8928f8 ;">Dibujos</h3>
+            <div class="carousel">
+                <img src="imgs/rannipint.jpg" alt="Dibujos" class="carousel-image active">
+                <img src="imgs/avan.jpg" alt="avan" class="carousel-image">
+                <img src="imgs/omg.jpg" alt="omg" class="carousel-image">
+                <img src="imgs/avatarmio.jpg" alt="avatarmio" class="carousel-image">
+                <img src="imgs/frog.png" alt="frog" class="carousel-image">
+                <img src="imgs/XD.png" alt="XD" class="carousel-image">
+            </div>
+            <div class="carousel-controls">
+                <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="setCurrentImage(0)"></span>
+                    <span class="indicator" onclick="setCurrentImage(1)"></span>
+                    <span class="indicator" onclick="setCurrentImage(2)"></span>
+                    <span class="indicator" onclick="setCurrentImage(3)"></span>
+                    <span class="indicator" onclick="setCurrentImage(4)"></span>
+                    <span class="indicator" onclick="setCurrentImage(5)"></span>
+                </div>
+                <button class="next" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="skills-container">
+      <h2>Habilidades</h2>
+      <p>Tecnologías</p>
+      
+      <!-- Tabs -->
+      <div class="skills-tabs">
+        <button class="tab-link active" onclick="openTab(event, 'backend')"><i class="fa fa-server"></i> Backend</button>
+        <button class="tab-link" onclick="openTab(event, 'frontend')">{ } Frontend</button>
+        <button class="tab-link" onclick="openTab(event, 'otros')"><i class="fa fa-plus"></i> Otros</button>
+      </div>
+  
+    <!-- Backend Skills -->
+    <div id="backend" class="tab-content  active">
+        <h3>Backend Skills</h3>
+        <div class="skills">
+          <span>Node.js</span>
+          <span>Php</span>
+          <span>Java</span>
+          <span>Python</span>
+          <span>C#</span>
+        </div>
+        <h3>Librerías y Frameworks</h3>
+        <div class="skills">
+          <span>Django (DRF)</span>
+          <span>Laravel</span>
+          <span>.Net Framework (4.8)</span>
+          <span>Socket.IO</span>
+          <span>TypeORM (en aprendizaje)</span>
+        </div>
+        <h3>Bases de Datos</h3>
+        <div class="skills">
+          <span>Mysql</span>
+          <span>PostgreSQL</span>
+        </div>
+      </div>
+
+      <!-- Frontend Skills -->
+      <div id="frontend" class="tab-content">
+        <h3>Frontend Skills</h3>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript (ES6+)</span>
+        </div>
+        <h3>Librerías y Frameworks</h3>
+        <div class="skills">
+          <span>ReactJS</span>
+          <span>Angular</span>
+          <span>Tailwind CSS</span>
+          <span>Next.js (en aprendizaje)</span>
+        </div>
+        
+      </div>
+   
+      <!-- Otros Skills -->
+      <div id="otros" class="tab-content">
+        <h3>Otros Skills</h3>
+        <div class="skills">
+          <span>Git</span>
+          <span>Docker</span>
+          <span>Github</span>
+          <span>Gitlab</span>
+          <span>Webpack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects">
+    <div class="Project">
+      <h2>Portafolio</h2>
+      <div class="project-card">
+          <h3>PROJECTOS</h3>
+          <p>APLICACIONES</p>
+          <div class="technologies">
+              <span>ReactJS</span>
+              <span>SQL</span>
+          <a href="#" class="demo-button">Demo</a>
+      </div>
+      <!-- Agrega más tarjetas de proyectos aquí -->
+  </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-container">
+      <h2>Métodos de Contacto</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> jaro0012@outlook.com</p>
+        <p><i class="fas fa-envelope"></i> jarothecowboy@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +57 3229342388</p>
+        <p><i class="fas fa-map-marker-alt"></i> Colombia - Pasto - Nariño</p>
+      </div>
+      <h2>¡Contáctame!</h2>
+    </div>
+  </section>
+
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
