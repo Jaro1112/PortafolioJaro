@@ -59,12 +59,13 @@ body {
     color: #8928f8;
   }
   /* Sección de bienvenida */
-#home {
+  #home {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Cambiado para centrar el contenido */
     align-items: center;
     min-height: 100vh;
-    padding: 0 540px;
+    padding: 0 20px; /* Ajustado para pantallas pequeñas */
+    flex-direction: column; /* Cambiado para apilar el contenido */
   }
   
   .intro {
@@ -119,10 +120,11 @@ body {
   
   /* Imagen de perfil */
   .profile-pic img {
-    width: 300px;
+    width: 100%; /* Ajustar el ancho a 100% para pantallas pequeñas */
+    max-width: 300px; /* Limitar el ancho máximo */
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
-  }
+}
   
   /* Sección "Sobre mí" */
 #about {
@@ -489,3 +491,5 @@ body {
         order: 3; /* Mueve el botón de proyectos al final */
     }
 }
+
+
