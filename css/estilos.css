@@ -125,8 +125,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
 }
-  #sdasda
-  /* Sección "Sobre mí" */
+
 #about {
     display: flex;
     justify-content: center;
@@ -135,10 +134,7 @@ body {
     background-color: #161b1a;
     padding: 100px 0;
   }
-  
-
-
-  
+ 
   .about-container {
     display: flex;
     justify-content: space-between;
